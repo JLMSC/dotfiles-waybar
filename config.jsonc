@@ -71,7 +71,7 @@
 		// The interval in which the information gets polled.
 		"interval": 15,
 		// Format used when a ethernet interface is displayed.
-		"format-ethernet": "⏶ {bandwidthUpBits}",
+		"format-ethernet": "⏶ {bandwidthUpBytes}",
 		// Format used when the displayed interface is disconnected.
 		"format-disconnected": "",
 	},
@@ -79,7 +79,7 @@
 		// The interval in which the information gets polled.
 		"interval": 15,
 		// Format used when a ethernet interface is displayed.
-		"format-ethernet": "⏷ {bandwidthDownBits}",
+		"format-ethernet": "⏷ {bandwidthDownBytes}",
 		// Format used when the displayed interface is disconnected.
 		"format-disconnected": "⌀ Disconnected",
 	},
