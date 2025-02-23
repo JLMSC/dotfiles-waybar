@@ -1,8 +1,5 @@
 # dotfiles-waybar
-.
-
-### Features
-.
+This repository contains all my custom configurations for [**Waybar**](https://github.com/Alexays/Waybar).
 
 ### Dependencies
 - [**pavucontrol**](https://freedesktop.org/software/pulseaudio/pavucontrol/) - Used in pulseaudio's module.<br>
@@ -22,7 +19,7 @@ Make sure that [**Waybar**](https://github.com/Alexays/Waybar) is being executed
 You can do this by adding `exec-once = waybar` to the `hyprland.conf` file. (stored at `~/.config/hypr/`)
 
 ### Screenshots
-.
+![Example](assets/example.png)
 
 ### TO-DO
 - [ ] Adjust the clock module's hover effect to match the Catppuccin color scheme.
