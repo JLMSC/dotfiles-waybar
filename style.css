@@ -1,0 +1,102 @@
+/* Based on https://github.com/catppuccin/waybar */
+@import "mocha.css";
+
+* {
+	font-family: FantasqueSansMono Nerd Font;
+	font-size: 14px;
+	font-weight: bold;
+	min-height: 0;
+}
+
+#waybar {
+	background: transparent;
+	color: @text;
+	margin: 5px 5px;
+}
+
+#disk,
+#disk.hdd,
+#cpu,
+#custom-gpu,
+#memory,
+#network,
+#clock,
+#tray,
+#bluetooth,
+#pulseaudio,
+#privacy,
+#custom-power {
+	background-color: @surface0;
+	padding: 0.5rem 0.5rem;
+	margin: 5px 0;
+}
+
+#disk {
+	color: @blue;
+	border-radius: 1rem 0px 0px 1rem;
+	margin-left: 1rem;
+}
+
+#disk.hdd {
+	color: @sapphire;
+	border-radius: 0rem;
+}
+
+#cpu {
+	color: @sky;
+	border-radius: 0rem;
+}
+
+#custom-gpu {
+	color: @teal;
+	border-radius: 0rem;
+}
+
+#memory {
+	color: @green;
+	border-radius: 0rem;
+}
+
+#network {
+	color: @yellow;
+	border-radius: 0rem;
+}
+
+#network.down {
+	color: @peach;
+	border-radius: 0px 1rem 1rem 0px;
+}
+
+#clock {
+	color: @lavender;
+	border-radius: 1rem;
+}
+
+#tray {
+	margin-left: 1rem;
+	border-radius: 1rem;
+}
+
+#bluetooth {
+	color: @peach;
+	border-radius: 1rem 0px 0px 1rem;
+	margin-left: 1rem;
+}
+
+#pulseaudio {
+	color: @maroon;
+	border-radius: 0px 1rem 1rem 0px;
+}
+
+#privacy {
+	color: @red;
+	margin-left: 1rem;
+	border-radius: 1rem;
+}
+
+#custom-power {
+	color: @mauve;
+	margin-right: 1rem;
+	margin-left: 1rem;
+	border-radius: 1rem;
+}
