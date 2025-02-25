@@ -24,6 +24,7 @@
 #tray,
 #bluetooth,
 #pulseaudio,
+#custom-ddcutil,
 #privacy,
 #custom-power {
 	background-color: @surface0;
@@ -78,12 +79,17 @@
 }
 
 #bluetooth {
-	color: @peach;
+	color: @yellow;
 	border-radius: 1rem 0px 0px 1rem;
 	margin-left: 1rem;
 }
 
 #pulseaudio {
+	color: @peach;
+	border-radius: 0rem;
+}
+
+#custom-ddcutil {
 	color: @maroon;
 	border-radius: 0px 1rem 1rem 0px;
 }

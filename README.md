@@ -3,6 +3,7 @@ This repository contains all my custom configurations for [**Waybar**](https://g
 
 ### Dependencies
 - [**pavucontrol**](https://freedesktop.org/software/pulseaudio/pavucontrol/) - Used in pulseaudio's module.<br>
+- [**ddcutil**](http://www.ddcutil.com/) - Control brightness on external monitors.
 
 ### Theme
 - [**Catppuccin**](https://github.com/catppuccin/waybar) - Mocha flavor<br>
@@ -31,5 +32,10 @@ You can do this by adding `exec-once = waybar` to the `hyprland.conf` file. (sto
 - [ ] Check if adding an OSD icon for Caps Lock and Num Lock in the right module (before the Bluetooth module) is possible.
 
 ### Notes
-#### Missing Icons
+#### Setting up ddcutil for brightness control.
+Install [**ddcutil**](http://www.ddcutil.com/).<br>
+Load `i2c-dev` on boot if `/dev/i2c-*` devices do no exist.<br>
+> You can do this by adding i2c_dev to /etc/modules-load.d/i2c-dev.conf
+
+#### Missing icons
 Install [**ttf-font-awesome**](https://fontawesome.com/) and [**Fantasque Sans Mono**](https://github.com/belluzj/fantasque-sans)<br>

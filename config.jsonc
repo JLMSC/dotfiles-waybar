@@ -1,10 +1,7 @@
 // -*- mode: jsonc -*-
 {
-	// Decide if the bar is displayed in front (top) of the windows or behind (bottom).
 	"layer": "top",
-	// Bar position.
 	"position": "top",
-	// Modules that will be displayed on the left.
 	"modules-left": [
 		"disk",
 		"disk#hdd",
@@ -14,131 +11,86 @@
 		"network",
 		"network#down"
 	],
-	// Modules that will be displayed on the center.
 	"modules-center": [
 		"clock"
 	],
-	// Modules that will be displayed on the right.
 	"modules-right": [
 		"tray",
 		"bluetooth",
 		"pulseaudio",
+		"custom/ddcutil",
 		"privacy",
 		"custom/power"
 	],
 	"disk": {
-		// The interval in which the information gets polled.
 		"interval": 30,
-		// How information should be displayed.
 		"format": "(/) {specific_used:0.2f} GB",
-		// Used to specify unit for specific_used.
 		"unit": "GB",
-		// Mount point of the filesystem to monitor.
 		"path": "/",
 
 	},
 	"disk#hdd": {
-		// The interval in which the information gets polled.
 		"interval": 30,
-		// How information should be displayed.
 		"format": "(/home) {specific_used:0.2f} GB",
-		// Used to specify unit for specific_used.
 		"unit": "GB",
-		// Mount point of the filesystem to monitor.
 		"path": "/home",
 	},
 	"cpu": {
-		// The interval in which the information gets polled.
 		"interval": 2,
-		// How information should be displayed.
 		"format": "CPU {usage}%"
 	},
 	"custom/gpu": {
-		// The interval in which the information gets polled.
 		"interval": 2,
-		// How information should be displayed.
 		"format": "GPU {}%",
-		// Shell command to be executed.
 		"exec": "nvidia-smi --query-gpu=utilization.gpu --format=csv,noheader,nounits"
 	},
 	"memory": {
-		// The interval in which the information gets polled.
 		"interval": 30,
-		// How information should be displayed.
 		"format": "RAM {used} GB"
 	},
 	"network": {
-		// The interval in which the information gets polled.
 		"interval": 15,
-		// Format used when a ethernet interface is displayed.
 		"format-ethernet": "⏶ {bandwidthUpBytes}",
-		// Format used when the displayed interface is disconnected.
 		"format-disconnected": "",
 	},
 	"network#down": {
-		// The interval in which the information gets polled.
 		"interval": 15,
-		// Format used when a ethernet interface is displayed.
 		"format-ethernet": "⏷ {bandwidthDownBytes}",
-		// Format used when the displayed interface is disconnected.
 		"format-disconnected": "⌀ Disconnected",
 	},
 	"clock": {
-		// The interval in which the information gets polled.
 		"interval": 60,
-		// The format, how the date and time should be displayed.
 		"format": " {:%b. %d - %R}",
-		// The timezone to display the time in.
 		"timezone": "America/Fortaleza",
-		// Tooltip on hover.
 		"tooltip-format": "<tt><small>{calendar}</small></tt>",
 		"calendar": {
-			// Calendar view mode.
 			"mode": "year",
-			// Count of months per row.
 			"mode-mon-col": 3,
-			// The position where week numbers should be displayed.
 			"week-pos": "right",
-			// Value to scroll months/years forward/backward.
 			"on-scroll": 1,
 			"format": {
-				// Format is applied to months header.
-				"months": "<span color='#ffead3'><b>{}</b></span>",
-				// Format is applied to days.
-				"days": "<span color='#ecc6d9'><b>{}</b></span>",
-				// Format is applied to week numbers.
+				"months": "<span color='#b4befe'><b>{}</b></span>",
+				"days": "<span color='#89b4fa'><b>{}</b></span>",
 				"weeks": "<span color='#99ffdd'><b>W{}</b></span>",
-				// Format is applied to weeks header.
-				"weekdays": "<span color='#ffcc66'><b>{}</b></span>",
-				// Format is applied to today.
-				"today": "<span color='#ff0000'><b><u>{}</u></b></span>"
+				"weekdays": "<span color='#fab387'><b>{}</b></span>",
+				"today": "<span color='#a6e3a1'><b><u>{}</u></b></span>"
 			}
 		},
 		"actions": {
-			// Switch calendar mode between year/month on click.
 			"on-click": "mode"
 		}
 	},
 	"tray": {
-		// Defines the size of the tray icons.
 		"icon-size": 21,
-		// Defines the spacing between the tray icons.
 		"spacing": 10
 	},
 	"bluetooth": {
-		// How information should be displayed.
 		"format": " {status}",
-		// The format is used when the displayed controller is connected to at least 1 device.
 		"format-connected": " {device_alias}",
-		// Is used when the displayed device provides its battery percentage.
 		"format-connected-battery": " {device_alias} {device_battery_percentage}%",
-		// How information should be displayed in the tooltip.
 		"tooltip-format": "{controller_alias}\t{controller_address}\n\n{num_connections} connected",
-		// Used when the displayed controller is connected to at least 1 device.
 		"tooltip-format-connected": "{controller_alias}\t{controller_address}\n\n{num_connections} connected\n\n{device_enumerate}",
-		// Used to define how each connected device should be displayed.
 		"tooltip-format-enumerate-connected": "{device_alias}\t{device_address}",
-		// Used to define how each connected device with a battery should be displayed.
 		"tooltip-format-enumerate-connected-battery": "{device_alias}\t{device_address}\t{device_battery_percentage}%"
 	},
 	"pulseaudio": {
@@ -149,17 +101,16 @@
 		},
 		"on-click": "pavucontrol"
 	},
+	"custom/ddcutil": {
+		"format": " {}%",
+		"interval": 2,
+		"exec": "ddcutil getvcp 10 --brief | grep -oP '(?<=C )\\d+'"
+	},
 	"privacy": {
-		// The spacing between each privacy icon.
 		"icon-spacing": 10,
-		// The size of each privacy icon.
 		"icon-size": 14,
-		// The reveal and hide transition duration.
 		"transition-duration": 250,
-		// Which privacy modules to monitor.
 		"modules": [
-			// type - Specifies which module to use and configure.
-			// tooltip - Option to disable tooltip on hover.
 			{
 				"type": "screenshare",
 				"tooltip": false
@@ -171,11 +122,8 @@
 		]
 	},
 	"custom/power": {
-		// How information should be displayed.
 		"format": "⏻",
-		// Options to enable tooltip on hover.
 		"tooltip": false,
-		// Command to execute when clicked.
 		"on-click": "shutdown"
 	},
 }
