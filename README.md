@@ -30,3 +30,6 @@ You can do this by adding `exec-once = waybar` to the `hyprland.conf` file. (sto
 - [ ] Check if adding a clipboard history icon in the right module (after the PulseAudio module) is possible.
 - [ ] Check if adding an OSD icon for Caps Lock and Num Lock in the right module (before the Bluetooth module) is possible.
 
+### Notes
+#### Missing Icons
+Install [**ttf-font-awesome**](https://fontawesome.com/) and [**Fantasque Sans Mono**](https://github.com/belluzj/fantasque-sans)<br>
