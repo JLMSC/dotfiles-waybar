@@ -15,9 +15,13 @@
 
 #disk.root,
 #disk.home,
+#cpu,
+#temperature,
 #custom-gpu_avg_use,
 #custom-gpu_temp,
-#memory {
+#memory,
+#network.upload, 
+#network.download {
 	background: @surface0;
 	padding-top: 0.5rem;
 	padding-bottom: 0.5rem;
@@ -37,8 +41,19 @@
 	padding-right: 0.25rem;
 }
 
-/* cpu use -> sky
-   cpu temp -> teal */
+#cpu {
+	color: @sky;
+	border-radius: 0;
+	padding-left: 0.25rem;
+	padding-right: 0.25rem;
+}
+
+#temperature {
+	color: @teal;
+	border-radius: 0;
+	padding-left: 0.25rem;
+	padding-right: 0.25rem;
+}
 
 #custom-gpu_avg_use {
 	color: @green;
@@ -56,6 +71,20 @@
 
 #memory {
 	color: @peach;
+	border-radius: 0;
+	padding-left: 0.25rem;
+	padding-right: 0.25rem;
+}
+
+#network.upload {
+	color: @maroon;
+	border-radius: 0;
+	padding-left: 0.25rem;
+	padding-right: 0.25rem;
+}
+
+#network.download {
+	color: @red;
 	border-radius: 0px 1rem 1rem 0px;
 	padding-left: 0.25rem;
 	padding-right: 1rem;

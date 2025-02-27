@@ -5,11 +5,13 @@
 	"modules-left": [
 		"disk#root",
 		"disk#home",
+		"cpu",
+		"temperature",
 		"custom/gpu_avg_use",
 		"custom/gpu_temp",
-		"memory"
-		//  download icon
-		//  upload icon
+		"memory",
+		"network#upload",
+		"network#download"
 	],
 	"disk#root": {
 		"format": " {specific_used:0.2f} GB",
@@ -24,6 +26,17 @@
 		"tooltip-format": "Used {used} out of {total} on ({path})",
 		"unit": "GB",
 		"path": "/home"
+	},
+	"cpu": {
+		"interval": 3,
+		"format": " CPU {usage}%",
+		"tooltip": false
+	},
+	"temperature": {
+		"interval": 3,
+		"format": " {temperatureC}°C",
+		"tooltip": false,
+		"hwmon-path": "/sys/devices/pci0000:00/0000:00:18.3/hwmon/hwmon2/temp1_input"
 	},
 	"custom/gpu_avg_use": {
 		"interval": 3,
@@ -41,6 +54,16 @@
 		"interval": 3,
 		"format": " {used} GB",
 		"tooltip": false
+	},
+	"network#upload": {
+		"interval": 15,
+		"format-ethernet": " {bandwidthUpBytes}",
+		"format-disconnected": ""
+	},
+	"network#download": {
+		"interval": 15,
+		"format-ethernet": " {bandwidthDownBytes}",
+		"format-disconnected": "⌀ Disconnected"
 	},
 	"modules-center": [
 		"clock#date",
