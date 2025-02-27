@@ -69,7 +69,8 @@
 	},
 	"modules-center": [
 		"clock#date",
-		"clock#time"
+		"clock#time",
+		"privacy"
 	],
 	"clock#date": {
 		"format": " {:%b. %d}",
@@ -79,12 +80,31 @@
 		"format": " {:%H:%M}",
 		"tooltip": false
 	},
+	"privacy": {
+		"icon-size": 16,
+		"icon-spacing": 10,
+		"transition-duration:": 250,
+		"modules": [
+			{
+				"type": "screenshare",
+				"tooltip": true,
+				"tooltip-icon-size": 14
+			},
+			{
+				"type": "audio-in",
+				"tooltip": true,
+				"tooltip-icon-size": 14
+			}
+		]
+	},
 	"modules-right": [
 		"tray",
 		"pulseaudio",
 		"bluetooth",
 		"custom/ddcutil",
-		"privacy",
+		"custom/notification",
+		"custom/clipboard",
+		"custom/printscreen",
 		"custom/power"
 	],
 	"tray": {
@@ -113,22 +133,18 @@
 		"tooltip": false,
 		"exec": "ddcutil getvcp 10 --brief | grep -oP '(?<=C )\\d+'"
 	},
-	"privacy": {
-		"icon-size": 14,
-		"icon-spacing": 10,
-		"transition-duration:": 250,
-		"modules": [
-			{
-				"type": "screenshare",
-				"tooltip": true,
-				"tooltip-icon-size": 14
-			},
-			{
-				"type": "audio-in",
-				"tooltip": true,
-				"tooltip-icon-size": 14
-			}
-		]
+	"custom/notification": {
+		"format": "",
+		"tooltip": false
+	},
+	"custom/clipboard": {
+		"format": "",
+		"tooltip": false
+	},
+	"custom/printscreen": {
+		"format": "",
+		"tooltip": false,
+		"on-click": "hyprshot -m region -o ~/Pictures"
 	},
 	"custom/power": {
 		"format": "⏻",

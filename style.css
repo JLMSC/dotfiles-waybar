@@ -110,6 +110,14 @@
 	padding-right: 1rem;
 }
 
+#privacy {
+	color: @red;
+	padding-top: 0.5rem;
+	padding-bottom: 0.5rem;
+	padding-left: 0.5rem;
+	padding-right: 0.5rem;
+}
+
 #tray {
 	background: @surface0;
 	padding-top: 0.5rem;
@@ -124,7 +132,9 @@
 #pulseaudio,
 #bluetooth,
 #custom-ddcutil,
-#privacy,
+#custom-notification,
+#custom-clipboard,
+#custom-printscreen,
 #custom-power {
 	background: @surface0;
 	padding-top: 0.5rem;
@@ -132,27 +142,41 @@
 }
 
 #pulseaudio {
-	color: @green;
+	color: @sky;
 	border-radius: 1rem 0px 0px 1rem;
 	padding-left: 1rem;
 	padding-right: 0.5rem;
 }
 
 #bluetooth {
-	color: @yellow;
+	color: @teal;
 	border-radius: 0;
 	padding-left: 0.5rem;
 	padding-right: 0.5rem;
 }
 
 #custom-ddcutil {
+	color: @green;
+	border-radius: 0;
+	padding-left: 0.5rem;
+	padding-right: 0.5rem;
+}
+
+#custom-notification {
+	color: @yellow;
+	border-radius: 0;
+	padding-left: 0.5rem;
+	padding-right: 0.5rem;
+}
+
+#custom-clipboard {
 	color: @peach;
 	border-radius: 0;
 	padding-left: 0.5rem;
 	padding-right: 0.5rem;
 }
 
-#privacy {
+#custom-printscreen {
 	color: @maroon;
 	border-radius: 0;
 	padding-left: 0.5rem;
