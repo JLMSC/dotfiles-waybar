@@ -29,7 +29,7 @@
 
 #disk.root {
 	color: @blue;
-	border-radius: 1rem 0px 0px 1rem;
+	border-radius: 0;
 	padding-left: 1rem;
 	padding-right: 0.25rem;
 }
@@ -106,6 +106,62 @@
 
 #clock.time {
 	border-radius: 0px 1rem 1rem 0px;
+	padding-left: 0.25rem;
+	padding-right: 1rem;
+}
+
+#tray {
+	background: @surface0;
+	padding-top: 0.5rem;
+	padding-bottom: 0.5rem;
+	color: @text;
+	border-radius: 1rem;
+	padding-left: 1rem;
+	padding-right: 1rem;
+	margin-right: 10px;
+}
+
+#pulseaudio,
+#bluetooth,
+#custom-ddcutil,
+#privacy,
+#custom-power {
+	background: @surface0;
+	padding-top: 0.5rem;
+	padding-bottom: 0.5rem;
+}
+
+#pulseaudio {
+	color: @green;
+	border-radius: 1rem 0px 0px 1rem;
+	padding-left: 1rem;
+	padding-right: 0.25rem;
+}
+
+#bluetooth {
+	color: @yellow;
+	border-radius: 0;
+	padding-left: 0.25rem;
+	padding-right: 0.25rem;
+}
+
+#custom-ddcutil {
+	color: @peach;
+	border-radius: 0;
+	padding-left: 0.25rem;
+	padding-right: 0.25rem;
+}
+
+#privacy {
+	color: @maroon;
+	border-radius: 0;
+	padding-left: 0.25rem;
+	padding-right: 0.25rem;
+}
+
+#custom-power {
+	color: @red;
+	border-radius: 0;
 	padding-left: 0.25rem;
 	padding-right: 1rem;
 }

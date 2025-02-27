@@ -58,12 +58,14 @@
 	"network#upload": {
 		"interval": 15,
 		"format-ethernet": " {bandwidthUpBytes}",
-		"format-disconnected": ""
+		"format-disconnected": "",
+		"tooltip": false
 	},
 	"network#download": {
 		"interval": 15,
 		"format-ethernet": " {bandwidthDownBytes}",
-		"format-disconnected": "⌀ Disconnected"
+		"format-disconnected": "⌀ Disconnected",
+		"tooltip": false
 	},
 	"modules-center": [
 		"clock#date",
@@ -75,6 +77,61 @@
 	},
 	"clock#time": {
 		"format": " {:%H:%M}",
+		"tooltip": false
+	},
+	"modules-right": [
+		"tray",
+		"pulseaudio",
+		"bluetooth",
+		"custom/ddcutil",
+		"privacy",
+		"custom/power"
+	],
+	"tray": {
+		"icon-size": 21,
+		"icon-spacing": 10
+	},
+	"pulseaudio": {
+		"format": "{icon} {volume}%",
+		"format-muted": " Muted",
+		"format-icons": {
+			"default": ["", "", ""]
+		},
+		"on-click": "pavucontrol"
+	},
+	"bluetooth": {
+		"format": "",
+		"format-off": "",
+		"format-on": " {status}",
+		"format-disabled": "",
+		"format-connected": " {device_alias}",
+		"tooltip": false
+	},
+	"custom/ddcutil": {
+		"interval": 3,
+		"format": " {}%",
+		"tooltip": false,
+		"exec": "ddcutil getvcp 10 --brief | grep -oP '(?<=C )\\d+'"
+	},
+	"privacy": {
+		"icon-size": 14,
+		"icon-spacing": 10,
+		"transition-duration:": 250,
+		"modules": [
+			{
+				"type": "screenshare",
+				"tooltip": true,
+				"tooltip-icon-size": 14
+			},
+			{
+				"type": "audio-in",
+				"tooltip": true,
+				"tooltip-icon-size": 14
+			}
+		]
+	},
+	"custom/power": {
+		"format": "⏻",
 		"tooltip": false
 	}
 }
