@@ -3,7 +3,8 @@ This repository contains all my custom configurations for [**Waybar**](https://g
 
 ### Dependencies
 - [**pavucontrol**](https://freedesktop.org/software/pulseaudio/pavucontrol/) - Used in pulseaudio's module.<br>
-- [**ddcutil**](http://www.ddcutil.com/) - Control brightness on external monitors.
+- [**ddcutil**](http://www.ddcutil.com/) - Control brightness on external monitors.<br>
+- [**hyprshot**](https://github.com/Gustash/hyprshot) - Take screenshots
 
 ### Theme
 - [**Catppuccin/Waybar**](https://github.com/catppuccin/waybar) - Color scheme.
@@ -24,8 +25,10 @@ You can do this by adding `exec-once = waybar` to the `hyprland.conf` file. (sto
 ![Example](assets/example.png)
 
 ### TO-DO
-- [ ] Use rofi to add clipboard history icon in the right module.
-- [ ] Use rofi to add a menu to power module.
+- [ ] Add a menu to custom-clipboard using rofi and cliphist.
+- [ ] Add a menu to custom-notification using swaynotificationcenter.
+- [ ] Add a menu to custom-power using rofi (shutdown, restart and logout).
+- [ ] Remove background from tray icons, make spacing lesser. (it looks better)
 - [ ] Use rofi to add a menu to bluetooth module.
 - [ ] Use rofi to add a menu to pulseaudio module.
 
