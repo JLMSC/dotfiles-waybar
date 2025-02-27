@@ -6,11 +6,11 @@ This repository contains all my custom configurations for [**Waybar**](https://g
 - [**ddcutil**](http://www.ddcutil.com/) - Control brightness on external monitors.
 
 ### Theme
-- [**Catppuccin/Waybar**](https://github.com/catppuccin/waybar)
+- [**Catppuccin/Waybar**](https://github.com/catppuccin/waybar) - Color scheme.
 
 ### Font
-- [**ttf-font-awesome**](https://fontawesome.com/)<br>
-- [**Fantasque Sans Mono**](https://github.com/belluzj/fantasque-sans)
+- [**ttf-font-awesome**](https://fontawesome.com/) - Used by the icons.<br>
+- [**Fantasque Sans Mono**](https://github.com/belluzj/fantasque-sans) - Font Family.
 
 ### Installation
 Follow their [**guide**](https://github.com/Alexays/Waybar) on how to install [**Waybar**](https://github.com/Alexays/Waybar).<br>
@@ -24,13 +24,10 @@ You can do this by adding `exec-once = waybar` to the `hyprland.conf` file. (sto
 ![Example](assets/example.png)
 
 ### TO-DO
-- [ ] Adjust the clock module's hover effect to match the Catppuccin color scheme.
-- [ ] Replace the text labels in the left module with matching icons.
-- [ ] Display the average temperature (°C) right after the CPU and GPU modules.
-- [ ] Expand the power module's functionality; currently, it only executes `shutdown`.
-- [ ] Check if adding a notification daemon icon in the center module (after the clock module) is possible.
-- [ ] Check if adding a clipboard history icon in the right module (after the PulseAudio module) is possible.
-- [ ] Check if adding an OSD icon for Caps Lock and Num Lock in the right module (before the Bluetooth module) is possible.
+- [ ] Use rofi to add clipboard history icon in the right module.
+- [ ] Use rofi to add a menu to power module.
+- [ ] Use rofi to add a menu to bluetooth module.
+- [ ] Use rofi to add a menu to pulseaudio module.
 
 ### Notes
 #### Setting up ddcutil for brightness control.
@@ -40,3 +37,6 @@ Load `i2c-dev` on boot if `/dev/i2c-*` devices do no exist.<br>
 
 #### Missing icons
 Install [**ttf-font-awesome**](https://fontawesome.com/) and [**Fantasque Sans Mono**](https://github.com/belluzj/fantasque-sans)<br>
+
+#### Adjusting CPU temperature
+You can check how to do this [**here**](https://github.com/Alexays/Waybar/wiki/Module:-Temperature).
