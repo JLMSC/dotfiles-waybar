@@ -89,7 +89,7 @@
 	],
 	"tray": {
 		"icon-size": 21,
-		"icon-spacing": 10
+		"spacing": 10
 	},
 	"pulseaudio": {
 		"format": "{icon} {volume}%",

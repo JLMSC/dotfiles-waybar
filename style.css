@@ -31,62 +31,62 @@
 	color: @blue;
 	border-radius: 0;
 	padding-left: 1rem;
-	padding-right: 0.25rem;
+	padding-right: 0.5rem;
 }
 
 #disk.home {
 	color: @sapphire;
 	border-radius: 0;
-	padding-left: 0.25rem;
-	padding-right: 0.25rem;
+	padding-left: 0.5rem;
+	padding-right: 0.5rem;
 }
 
 #cpu {
 	color: @sky;
 	border-radius: 0;
-	padding-left: 0.25rem;
-	padding-right: 0.25rem;
+	padding-left: 0.5rem;
+	padding-right: 0.5rem;
 }
 
 #temperature {
 	color: @teal;
 	border-radius: 0;
-	padding-left: 0.25rem;
-	padding-right: 0.25rem;
+	padding-left: 0.5rem;
+	padding-right: 0.5rem;
 }
 
 #custom-gpu_avg_use {
 	color: @green;
 	border-radius: 0;
-	padding-left: 0.25rem;
-	padding-right: 0.25rem;
+	padding-left: 0.5rem;
+	padding-right: 0.5rem;
 }
 
 #custom-gpu_temp {
 	color: @yellow;
 	border-radius: 0;
-	padding-left: 0.25rem;
-	padding-right: 0.25rem;
+	padding-left: 0.5rem;
+	padding-right: 0.5rem;
 }
 
 #memory {
 	color: @peach;
 	border-radius: 0;
-	padding-left: 0.25rem;
-	padding-right: 0.25rem;
+	padding-left: 0.5rem;
+	padding-right: 0.5rem;
 }
 
 #network.upload {
 	color: @maroon;
 	border-radius: 0;
-	padding-left: 0.25rem;
-	padding-right: 0.25rem;
+	padding-left: 0.5rem;
+	padding-right: 0.5rem;
 }
 
 #network.download {
 	color: @red;
 	border-radius: 0px 1rem 1rem 0px;
-	padding-left: 0.25rem;
+	padding-left: 0.5rem;
 	padding-right: 1rem;
 }
 
@@ -101,12 +101,12 @@
 #clock.date {
 	border-radius: 1rem 0px 0px 1rem;
 	padding-left: 1rem;
-	padding-right: 0.25rem;
+	padding-right: 0.5rem;
 }
 
 #clock.time {
 	border-radius: 0px 1rem 1rem 0px;
-	padding-left: 0.25rem;
+	padding-left: 0.5rem;
 	padding-right: 1rem;
 }
 
@@ -135,33 +135,33 @@
 	color: @green;
 	border-radius: 1rem 0px 0px 1rem;
 	padding-left: 1rem;
-	padding-right: 0.25rem;
+	padding-right: 0.5rem;
 }
 
 #bluetooth {
 	color: @yellow;
 	border-radius: 0;
-	padding-left: 0.25rem;
-	padding-right: 0.25rem;
+	padding-left: 0.5rem;
+	padding-right: 0.5rem;
 }
 
 #custom-ddcutil {
 	color: @peach;
 	border-radius: 0;
-	padding-left: 0.25rem;
-	padding-right: 0.25rem;
+	padding-left: 0.5rem;
+	padding-right: 0.5rem;
 }
 
 #privacy {
 	color: @maroon;
 	border-radius: 0;
-	padding-left: 0.25rem;
-	padding-right: 0.25rem;
+	padding-left: 0.5rem;
+	padding-right: 0.5rem;
 }
 
 #custom-power {
 	color: @red;
 	border-radius: 0;
-	padding-left: 0.25rem;
+	padding-left: 0.5rem;
 	padding-right: 1rem;
 }
