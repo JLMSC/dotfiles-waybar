@@ -3,106 +3,80 @@
 
 * {
 	font-family: FantasqueSansMono Nerd Font;
-	font-size: 14px;
+	font-size: 16px;
 	font-weight: bold;
 	min-height: 0;
 }
 
 #waybar {
-	background: transparent;
+	background: @transparent;
 	color: @text;
-	margin: 5px 5px;
 }
 
-#disk,
-#disk.hdd,
-#cpu,
-#custom-gpu,
-#memory,
-#network,
-#clock,
-#tray,
-#bluetooth,
-#pulseaudio,
-#custom-ddcutil,
-#privacy,
-#custom-power {
-	background-color: @surface0;
-	padding: 0.5rem 0.5rem;
-	margin: 5px 0;
+#disk.root,
+#disk.home,
+#custom-gpu_avg_use,
+#custom-gpu_temp,
+#memory {
+	background: @surface0;
+	padding-top: 0.5rem;
+	padding-bottom: 0.5rem;
 }
 
-#disk {
+#disk.root {
 	color: @blue;
 	border-radius: 1rem 0px 0px 1rem;
-	margin-left: 1rem;
+	padding-left: 1rem;
+	padding-right: 0.25rem;
 }
 
-#disk.hdd {
+#disk.home {
 	color: @sapphire;
-	border-radius: 0rem;
+	border-radius: 0;
+	padding-left: 0.25rem;
+	padding-right: 0.25rem;
 }
 
-#cpu {
-	color: @sky;
-	border-radius: 0rem;
+/* cpu use -> sky
+   cpu temp -> teal */
+
+#custom-gpu_avg_use {
+	color: @green;
+	border-radius: 0;
+	padding-left: 0.25rem;
+	padding-right: 0.25rem;
 }
 
-#custom-gpu {
-	color: @teal;
-	border-radius: 0rem;
+#custom-gpu_temp {
+	color: @yellow;
+	border-radius: 0;
+	padding-left: 0.25rem;
+	padding-right: 0.25rem;
 }
 
 #memory {
-	color: @green;
-	border-radius: 0rem;
-}
-
-#network {
-	color: @yellow;
-	border-radius: 0rem;
-}
-
-#network.down {
 	color: @peach;
 	border-radius: 0px 1rem 1rem 0px;
+	padding-left: 0.25rem;
+	padding-right: 1rem;
 }
 
-#clock {
+#clock.date,
+#clock.time {
 	color: @lavender;
-	border-radius: 1rem;
+	background: @surface0;
+	padding-top: 0.5rem;
+	padding-bottom: 0.5rem;
 }
 
-#tray {
-	margin-left: 1rem;
-	border-radius: 1rem;
-}
-
-#bluetooth {
-	color: @yellow;
+#clock.date {
 	border-radius: 1rem 0px 0px 1rem;
-	margin-left: 1rem;
+	padding-left: 1rem;
+	padding-right: 0.25rem;
 }
 
-#pulseaudio {
-	color: @peach;
-	border-radius: 0rem;
-}
-
-#custom-ddcutil {
-	color: @maroon;
+#clock.time {
 	border-radius: 0px 1rem 1rem 0px;
-}
-
-#privacy {
-	color: @red;
-	margin-left: 1rem;
-	border-radius: 1rem;
-}
-
-#custom-power {
-	color: @mauve;
-	margin-right: 1rem;
-	margin-left: 1rem;
-	border-radius: 1rem;
+	padding-left: 0.25rem;
+	padding-right: 1rem;
 }

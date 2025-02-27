@@ -1,129 +1,57 @@
-// -*- mode: jsonc -*-
 {
 	"layer": "top",
 	"position": "top",
+	"mode": "dock",
 	"modules-left": [
-		"disk",
-		"disk#hdd",
-		"cpu",
-		"custom/gpu",
-		"memory",
-		"network",
-		"network#down"
+		"disk#root",
+		"disk#home",
+		"custom/gpu_avg_use",
+		"custom/gpu_temp",
+		"memory"
+		//  download icon
+		//  upload icon
 	],
-	"modules-center": [
-		"clock"
-	],
-	"modules-right": [
-		"tray",
-		"bluetooth",
-		"pulseaudio",
-		"custom/ddcutil",
-		"privacy",
-		"custom/power"
-	],
-	"disk": {
-		"interval": 30,
-		"format": "(/) {specific_used:0.2f} GB",
+	"disk#root": {
+		"format": " {specific_used:0.2f} GB",
+		"tooltip": true,
+		"tooltip-format": "Used {used} out of {total} on ({path})",
 		"unit": "GB",
-		"path": "/",
-
+		"path": "/"
 	},
-	"disk#hdd": {
-		"interval": 30,
-		"format": "(/home) {specific_used:0.2f} GB",
+	"disk#home": {
+		"format": " {specific_used:0.2f} GB",
+		"tooltip": true,
+		"tooltip-format": "Used {used} out of {total} on ({path})",
 		"unit": "GB",
-		"path": "/home",
+		"path": "/home"
 	},
-	"cpu": {
-		"interval": 2,
-		"format": "CPU {usage}%"
-	},
-	"custom/gpu": {
-		"interval": 2,
-		"format": "GPU {}%",
+	"custom/gpu_avg_use": {
+		"interval": 3,
+		"format": " GPU {}%",
+		"tooltip": false,
 		"exec": "nvidia-smi --query-gpu=utilization.gpu --format=csv,noheader,nounits"
 	},
-	"memory": {
-		"interval": 30,
-		"format": "RAM {used} GB"
-	},
-	"network": {
-		"interval": 15,
-		"format-ethernet": "⏶ {bandwidthUpBytes}",
-		"format-disconnected": "",
-	},
-	"network#down": {
-		"interval": 15,
-		"format-ethernet": "⏷ {bandwidthDownBytes}",
-		"format-disconnected": "⌀ Disconnected",
-	},
-	"clock": {
-		"interval": 60,
-		"format": " {:%b. %d - %R}",
-		"timezone": "America/Fortaleza",
-		"tooltip-format": "<tt><small>{calendar}</small></tt>",
-		"calendar": {
-			"mode": "year",
-			"mode-mon-col": 3,
-			"week-pos": "right",
-			"on-scroll": 1,
-			"format": {
-				"months": "<span color='#b4befe'><b>{}</b></span>",
-				"days": "<span color='#89b4fa'><b>{}</b></span>",
-				"weeks": "<span color='#99ffdd'><b>W{}</b></span>",
-				"weekdays": "<span color='#fab387'><b>{}</b></span>",
-				"today": "<span color='#a6e3a1'><b><u>{}</u></b></span>"
-			}
-		},
-		"actions": {
-			"on-click": "mode"
-		}
-	},
-	"tray": {
-		"icon-size": 21,
-		"spacing": 10
-	},
-	"bluetooth": {
-		"format": " {status}",
-		"format-connected": " {device_alias}",
-		"format-connected-battery": " {device_alias} {device_battery_percentage}%",
-		"tooltip-format": "{controller_alias}\t{controller_address}\n\n{num_connections} connected",
-		"tooltip-format-connected": "{controller_alias}\t{controller_address}\n\n{num_connections} connected\n\n{device_enumerate}",
-		"tooltip-format-enumerate-connected": "{device_alias}\t{device_address}",
-		"tooltip-format-enumerate-connected-battery": "{device_alias}\t{device_address}\t{device_battery_percentage}%"
-	},
-	"pulseaudio": {
-		"format": "{icon} {volume}%",
-		"format-muted": "",
-		"format-icons": {
-			"default": ["", "", " "]
-		},
-		"on-click": "pavucontrol"
-	},
-	"custom/ddcutil": {
-		"format": " {}%",
-		"interval": 2,
-		"exec": "ddcutil getvcp 10 --brief | grep -oP '(?<=C )\\d+'"
-	},
-	"privacy": {
-		"icon-spacing": 10,
-		"icon-size": 14,
-		"transition-duration": 250,
-		"modules": [
-			{
-				"type": "screenshare",
-				"tooltip": false
-			},
-			{
-				"type": "audio-in",
-				"tooltip": false
-			}
-		]
-	},
-	"custom/power": {
-		"format": "⏻",
+	"custom/gpu_temp": {
+		"interval": 3,
+		"format": " {}°C",
 		"tooltip": false,
-		"on-click": "shutdown"
+		"exec": "nvidia-smi --query-gpu=temperature.gpu --format=csv,noheader"
 	},
+	"memory": {
+		"interval": 3,
+		"format": " {used} GB",
+		"tooltip": false
+	},
+	"modules-center": [
+		"clock#date",
+		"clock#time"
+	],
+	"clock#date": {
+		"format": " {:%b. %d}",
+		"tooltip": false
+	},
+	"clock#time": {
+		"format": " {:%H:%M}",
+		"tooltip": false
+	}
 }

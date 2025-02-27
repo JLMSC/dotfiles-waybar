@@ -6,10 +6,11 @@ This repository contains all my custom configurations for [**Waybar**](https://g
 - [**ddcutil**](http://www.ddcutil.com/) - Control brightness on external monitors.
 
 ### Theme
-- [**Catppuccin**](https://github.com/catppuccin/waybar) - Mocha flavor<br>
+- [**Catppuccin/Waybar**](https://github.com/catppuccin/waybar)
 
 ### Font
-- [**Fantasque Sans Mono**](https://github.com/belluzj/fantasque-sans) - FantasqueSansMono Nerd Font<br>
+- [**ttf-font-awesome**](https://fontawesome.com/)<br>
+- [**Fantasque Sans Mono**](https://github.com/belluzj/fantasque-sans)
 
 ### Installation
 Follow their [**guide**](https://github.com/Alexays/Waybar) on how to install [**Waybar**](https://github.com/Alexays/Waybar).<br>
